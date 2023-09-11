@@ -14,6 +14,7 @@ weights = GradeWeights()
 my_grades.quiz_1 = 0.78 # Received 78% in the first quiz
 
 # Print out the grades to console
+print("Marc Andreu Aguilar, Srinivas Adan")
 print(my_grades)
 
 # Calculate course grade based on the grades set above
