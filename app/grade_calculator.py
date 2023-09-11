@@ -82,3 +82,19 @@ class GradeCalculator:
             return 'D'
         else:
             return 'F'
+    
+    @staticmethod
+    def calculate_minimum_average(grades: Grades, weights: GradeWeights) -> float:
+        quiz_1 = 0 if grades.quiz_1 is None else grades.quiz_1
+        quiz_2 = 0 if grades.quiz_2 is None else grades.quiz_2
+        midterm = 0 if grades.midterm is None else grades.midterm
+        final = 0 if grades.final is None else grades.final
+        project = 0 if grades.project is None else grades.project
+
+
+        quizzes_part = ((quiz_1 + quiz_2) / 2) * weights.quizzes
+        midterm_part = midterm * weights.midterm
+        project_part = project * weights.project
+        final_part = final * weights.final
+        course_grade = quizzes_part + midterm_part + project_part + final_part
+        return course_grade

@@ -30,3 +30,9 @@ optimistic_percentage_grade = GradeCalculator.calculate_optimistic_course_percen
 optimistic_letter_grade = GradeCalculator.calculate_letter_grade(optimistic_percentage_grade)
 print(f'If all other assignments are 100%, the overall course would be {optimistic_percentage_grade*100}%, which is a {optimistic_letter_grade}')
 
+# Calculate minimum grade, assuming assignments not turned in are 0%
+minimum_percentage_grade = GradeCalculator.calculate_minimum_average(my_grades, weights)
+minimum_letter_grade = GradeCalculator.calculate_letter_grade(minimum_percentage_grade)
+print(f'If all other assignments are 0%, the overall course would be {minimum_percentage_grade*100}%, which is a {minimum_letter_grade}')
+
+
